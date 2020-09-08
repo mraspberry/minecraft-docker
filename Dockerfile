@@ -11,7 +11,6 @@ RUN addgroup -S minecraft && adduser -S minecraft -G minecraft && \
     chown -R minecraft:minecraft /opt/minecraft/
 
 COPY --chown=minecraft:minecraft server.properties /opt/minecraft/
-COPY --chown=minecraft:minecraft datapacks /opt/minecraft/datapacks
 
 RUN sed -i "/^rcon\.password/s/CHANGEME/${RCON_PW}/" /opt/minecraft/server.properties || exit 1
 
