@@ -1,2 +1,2 @@
 # minecraft-docker
-Dockerfile for minecraft
+Dockerfile for minecraft. Publishes image to Github Container Repository
