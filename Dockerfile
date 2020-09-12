@@ -7,7 +7,7 @@ ENV ACCEPTED_EULA=$ACCEPT_EULA
 
 RUN addgroup -S minecraft && adduser -S minecraft -G minecraft && \
     mkdir -p /opt/minecraft/world && apk add --no-cache wget && \
-    wget -q -O /opt/minecraft/minecraft-server.1.16.2.jar https://launcher.mojang.com/v1/objects/c5f6fb23c3876461d46ec380421e42b289789530/server.jar && \
+    wget -q -O /opt/minecraft/minecraft-server.1.16.3.jar https://launcher.mojang.com/v1/objects/f02f4473dbf152c23d7d484952121db0b36698cb/server.jar && \
     chown -R minecraft:minecraft /opt/minecraft/
 
 COPY --chown=minecraft:minecraft server.properties /opt/minecraft/
