@@ -16,7 +16,7 @@ RUN sed -i "/^rcon\.password/s/CHANGEME/${RCON_PW}/" /opt/minecraft/server.prope
 
 WORKDIR /opt/minecraft
 USER minecraft
-RUN java -jar minecraft-server.1.16.2.jar nogui || true
+RUN java -jar minecraft-server.1.16.3.jar nogui || true
 RUN [ "$ACCEPTED_EULA" == "true" ] && sed -i 's/eula=false/eula=true/' eula.txt || exit 1
 EXPOSE 25565 25575
-CMD ["java", "-Xmx2048M", "-Xms2048M", "-jar", "minecraft-server.1.16.2.jar", "nogui"]
+CMD ["java", "-Xmx2048M", "-Xms2048M", "-jar", "minecraft-server.1.16.3.jar", "nogui"]
